@@ -1,22 +1,22 @@
-# insh
+ish  (insulter shell)
 =========
 
 Insults You Whenever You Get An Error !!!
 
-## Installation
-~~~~~~~~~~~~~~~~~~
+Installation
+=========
 
-`pip install insh`
+`pip install insulter`
 
 ## Usage
 
 ```
-Usage: insh <commands>
+Usage: ish <commands>
 
 ```
 
 TODO
-~~~~
+=========
 
 -> Add A Shell
 
