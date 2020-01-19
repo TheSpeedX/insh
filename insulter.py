@@ -3,6 +3,7 @@ from random import choice
 import sys
 import os
 import ctypes
+import tempfile
 
 def color(text,colour='W'):
 	if os.name is 'nt':
@@ -22,7 +23,8 @@ def help():
 	print("\n\nThis is A Simple Module That insults you at wrong code...")
 	print("\n\nUsage:  ish <command>")
 	print("Author: SpeedX")
-def execute():
+
+def main():
 	messages = [
 			"You type like I drive.",
 			"You speak an infinite deal of nothing",
@@ -69,17 +71,17 @@ def execute():
 			"It can only be attributed to human error.",
 			"Did someone dropped you while you were a baby, eh?",
 			"Take a stress pill and think things over."]
-	if len(sys.argv)==0:
+	if len(sys.argv)==1:
 		help()
+		exit()
 	try:
-		result = subprocess.run(sys.argv, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+		result = subprocess.run(sys.argv[1:],shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	except:
 		color(choice(messages)+"\n",'R')
 		color(sys.argv[1]+" : command not found",'B')
-		return
+		exit()
 	out = result.stdout.decode('utf-8')
 	err = result.stderr.decode('utf-8')
-
 	if err:
 		color(choice(messages)+"\n",'R')
 		color(err,'B')
