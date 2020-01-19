@@ -20,7 +20,7 @@ Usage: insh <commands>
 ```
 Snapshot
 ===========
-<img src="https://raw.githubusercontent.com/TheSpeedX/insulter/master/test.png" alt="Running insh"><br>
+<img src="https://raw.githubusercontent.com/TheSpeedX/insh/master/test.png" alt="Running insh"><br>
 It Works !!!
 
 TODO
