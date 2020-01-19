@@ -15,7 +15,7 @@ or install from source
 ## Usage
 
 ```
-Usage: ish <commands>
+Usage: insh <commands>
 
 ```
 Snapshot
