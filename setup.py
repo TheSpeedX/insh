@@ -11,8 +11,8 @@ setup(
 	long_description_content_type="text/markdown",
     author='TheSpeedX',
     author_email='ggspeedx29@gmail.com',
-	url = 'https://github.com/TheSpeedX/insulter',
-	download_url ="https://github.com/TheSpeedX/insulter/archive/master.zip",
+	url = 'https://github.com/TheSpeedX/insh',
+	download_url ="https://github.com/TheSpeedX/insh/archive/master.zip",
 	keywords = ['shell','funny','insult','python'],
 	data_files=[('', ['LICENSE'])],
 	classifiers=[
