@@ -3,10 +3,11 @@ from setuptools import setup
 with open("README.md", "r") as fh:
 	long_description = fh.read()
 setup(
-	name = 'insulter',
-    version = '1.0',
+	name = 'insh',
+    version = '1.1',
     description = 'Insults You When You Get An Error',
     long_description=long_description,
+	long_description_content_type="text/markdown",
     author='TheSpeedX',
     author_email='ggspeedx29@gmail.com',
 	url = 'https://github.com/TheSpeedX/insulter',
@@ -29,7 +30,7 @@ setup(
     license = 'MIT',
 	entry_points={
         'console_scripts': [
-            'ish = insulter:main',
+            'ish = insh:main',
         ],
 		}
 )
