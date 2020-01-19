@@ -1,4 +1,4 @@
-ish  (insulter shell)
+insh  (insulter shell)
 =========
 
 Insults You Whenever You Get An Error !!!
