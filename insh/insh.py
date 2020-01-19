@@ -21,7 +21,7 @@ def color(text,colour='W'):
 		print(colord[colour]+text+colord['W'])
 def help():
 	print("\n\nThis is A Simple Module That insults you at wrong code...")
-	print("\n\nUsage:  ish <command>")
+	print("\n\nUsage:  insh <command>")
 	print("Author: SpeedX")
 
 def main():
