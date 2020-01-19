@@ -6,7 +6,11 @@ Insults You Whenever You Get An Error !!!
 Installation
 =========
 
-`pip install insulter`
+`pip install insh`
+
+or install from source
+
+`pip install git+https://github.com/TheSpeedX/insh.git`
 
 ## Usage
 
@@ -14,6 +18,10 @@ Installation
 Usage: ish <commands>
 
 ```
+Snapshot
+===========
+<img src="https://raw.githubusercontent.com/TheSpeedX/insulter/master/test.png" alt="Running insh"><br>
+It Works !!!
 
 TODO
 =========
