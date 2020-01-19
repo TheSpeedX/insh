@@ -4,6 +4,7 @@ with open("README.md", "r") as fh:
 	long_description = fh.read()
 setup(
 	name = 'insh',
+	packages = ['insh'],
     version = '1.1',
     description = 'Insults You When You Get An Error',
     long_description=long_description,
@@ -30,7 +31,7 @@ setup(
     license = 'MIT',
 	entry_points={
         'console_scripts': [
-            'ish = insh:main',
+            'insh = insh.insh:main',
         ],
 		}
 )
