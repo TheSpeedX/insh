@@ -6,7 +6,7 @@ import ctypes
 import tempfile
 
 def color(text,colour='W'):
-	if os.name is 'nt':
+	if os.name == 'nt':
 		colord={'W': 15,'B': 9,'G': 10,'C': 11,'R':12}
 		if not colour in colord:
 			colour='W'
@@ -24,7 +24,15 @@ def help():
 	print("\n\nUsage:  insh <command>")
 	print("Author: SpeedX")
 
-def main():
+
+def createshell():
+    import smartinput
+    color("Shell v1 Started. Made by Shivam (@shivamsn97)")
+    theshell = smartinput.Shell(callback=main, intitle=smartinput.Fore.GREEN+"$ "+smartinput.Style.RESET_ALL, outtitle="")
+    theshell.start()
+    
+
+def main(cmd = None, shell=None):
 	messages = [
 			"You type like I drive.",
 			"You speak an infinite deal of nothing",
@@ -71,14 +79,18 @@ def main():
 			"It can only be attributed to human error.",
 			"Did someone dropped you while you were a baby, eh?",
 			"Take a stress pill and think things over."]
-	if len(sys.argv)==1:
-		help()
+	if len(sys.argv)==1 and not cmd:
+		createshell()
 		exit()
+	if len(sys.argv) > 1:
+	    if sys.argv[1] == "help":
+	        help()
+	        exit()
 	try:
-		result = subprocess.run(sys.argv[1:],shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+		result = subprocess.run(sys.argv[1:] if not cmd else cmd,shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	except:
 		color(choice(messages)+"\n",'R')
-		color(sys.argv[1]+" : command not found",'B')
+		color(sys.argv[1] if not cmd else cmd+" : command not found",'B')
 		exit()
 	out = result.stdout.decode('utf-8')
 	err = result.stderr.decode('utf-8')
