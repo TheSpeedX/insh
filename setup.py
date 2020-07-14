@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 setup(
 	name = 'insh',
 	packages = ['insh'],
-    version = '1.1',
+    version = '1.2',
     description = 'Insults You When You Get An Error',
     long_description=long_description,
 	long_description_content_type="text/markdown",
@@ -15,6 +15,7 @@ setup(
 	download_url ="https://github.com/TheSpeedX/insh/archive/master.zip",
 	keywords = ['shell','funny','insult','python'],
 	data_files=[('', ['LICENSE'])],
+	install_requires=['smartinput'],
 	classifiers=[
 	'Development Status :: 4 - Beta',
 	'Intended Audience :: Developers',

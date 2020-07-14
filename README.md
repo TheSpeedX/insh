@@ -16,6 +16,9 @@ or install from source
 
 ```
 Usage: insh <commands>
+or:  insh   #To start a shell
+
+insh help   #For help
 
 ```
 Snapshot
@@ -26,7 +29,7 @@ It Works !!!
 TODO
 =========
 
--> Add A Shell
+-> Add A Shell (Done)
 
 
 Note
