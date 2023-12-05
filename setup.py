@@ -31,7 +31,7 @@ setup(
     license = 'MIT',
 	entry_points={
         'console_scripts': [
-            'insh = insh.insh:main',
+            'insh = insh.command_line:main',
         ],
 		}
 )
