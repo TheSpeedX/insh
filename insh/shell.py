@@ -20,7 +20,7 @@ class INSH:
         self.shell = shell
 
     def color_windows(self, text, colour="W"):
-        if not colour in self.color_map:
+        if colour not in self.color_map:
             colour = "W"
         handle = ctypes.windll.kernel32.GetStdHandle(-11)
         ctypes.windll.kernel32.SetConsoleTextAttribute(handle, self.color_map[colour])
@@ -28,7 +28,7 @@ class INSH:
         ctypes.windll.kernel32.SetConsoleTextAttribute(handle, self.color_map["W"])
 
     def color_linux(self, text, colour="W"):
-        if not colour in self.color_map:
+        if colour not in self.color_map:
             colour = "W"
         print(self.color_map[colour] + text + self.color_map["W"])
 
@@ -114,7 +114,7 @@ class INSH:
         api_key = input()
         self.set_api_key(api_key)
 
-        if self.shell == "bash" or self.shell == "bash.exe":
+        if self.shell in ["bash", "bash.exe"]:
             with open(C.INSH_BASHRC_PATH, "w") as f:
                 f.write(
                     C.BASH_CONFIGURATION
